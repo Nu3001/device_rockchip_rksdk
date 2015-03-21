@@ -15,8 +15,8 @@
 
 # Everything in this directory will become public
 
-$(shell python device/rockchip/rksdk/auto_generator.py $(TARGET_PRODUCT) preinstall)
-$(shell python device/rockchip/rksdk/auto_generator.py $(TARGET_PRODUCT) preinstall_del)
+#$(shell python device/rockchip/rksdk/auto_generator.py $(TARGET_PRODUCT) preinstall)
+#$(shell python device/rockchip/rksdk/auto_generator.py $(TARGET_PRODUCT) preinstall_del)
 -include device/rockchip/$(TARGET_PRODUCT)/preinstall/preinstall.mk
 -include device/rockchip/$(TARGET_PRODUCT)/preinstall_del/preinstall.mk
 
