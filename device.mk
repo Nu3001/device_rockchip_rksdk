@@ -271,9 +271,6 @@ $(call inherit-product-if-exists, external/alsa-utils/copy.mk)
 #//*************************************************
 #//* add by bonovo zbiao for android box
 #//*************************************************
-#PRODUCT_COPY_FILES += \
-#    device/rockchip/$(TARGET_PRODUCT)/newsmy_initlogo.rle:root/initlogo.rle
-#    #device/rockchip/$(TARGET_PRODUCT)/bootanimation.zip:system/media/bootanimation.zip 
 
 PRODUCT_PACKAGES += \
 		blogd \
