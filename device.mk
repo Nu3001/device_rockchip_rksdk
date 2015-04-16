@@ -113,7 +113,8 @@ PRODUCT_COPY_FILES += \
     device/rockchip/rksdk/ueventd.$(TARGET_BOARD_HARDWARE).rc:root/ueventd.$(TARGET_BOARD_HARDWARE).rc \
     device/rockchip/rksdk/media_profiles_default.xml:system/etc/media_profiles_default.xml \
     device/rockchip/rksdk/alarm_filter.xml:system/etc/alarm_filter.xml \
-    device/rockchip/rksdk/rk29-keypad.kl:system/usr/keylayout/rk29-keypad.kl
+    device/rockchip/rksdk/rk29-keypad.kl:system/usr/keylayout/rk29-keypad.kl \
+    device/rockchip/rksdk/sysinit:system/bin/sysinit 
 
 PRODUCT_COPY_FILES += \
     hardware/broadcom/wlan/bcmdhd/config/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \

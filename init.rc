@@ -639,3 +639,10 @@ service bonovo-seriald /system/bin/seriald
 
 service bonovo-logd /system/bin/blogd
     class main
+
+service sysinit /system/bin/sysinit
+    oneshot
+    class late_start
+    user root
+    group root
+
