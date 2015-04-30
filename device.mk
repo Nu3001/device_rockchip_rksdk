@@ -15,8 +15,8 @@
 
 # Everything in this directory will become public
 
-#$(shell python device/rockchip/rksdk/auto_generator.py $(TARGET_PRODUCT) preinstall)
-#$(shell python device/rockchip/rksdk/auto_generator.py $(TARGET_PRODUCT) preinstall_del)
+$(shell python device/rockchip/rksdk/auto_generator.py $(TARGET_PRODUCT) preinstall)
+$(shell python device/rockchip/rksdk/auto_generator.py $(TARGET_PRODUCT) preinstall_del)
 -include device/rockchip/$(TARGET_PRODUCT)/preinstall/preinstall.mk
 -include device/rockchip/$(TARGET_PRODUCT)/preinstall_del/preinstall.mk
 
@@ -113,8 +113,7 @@ PRODUCT_COPY_FILES += \
     device/rockchip/rksdk/ueventd.$(TARGET_BOARD_HARDWARE).rc:root/ueventd.$(TARGET_BOARD_HARDWARE).rc \
     device/rockchip/rksdk/media_profiles_default.xml:system/etc/media_profiles_default.xml \
     device/rockchip/rksdk/alarm_filter.xml:system/etc/alarm_filter.xml \
-    device/rockchip/rksdk/rk29-keypad.kl:system/usr/keylayout/rk29-keypad.kl \
-    device/rockchip/rksdk/sysinit:system/bin/sysinit 
+    device/rockchip/rksdk/rk29-keypad.kl:system/usr/keylayout/rk29-keypad.kl
 
 PRODUCT_COPY_FILES += \
     hardware/broadcom/wlan/bcmdhd/config/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
@@ -140,8 +139,7 @@ endif
 endif
 endif
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/audio_effects.conf:system/etc/audio_effects.conf
+    $(LOCAL_PATH)/audio_policy.conf:system/etc/audio_policy.conf
 
 
 PRODUCT_COPY_FILES += \
@@ -273,6 +271,9 @@ $(call inherit-product-if-exists, external/alsa-utils/copy.mk)
 #//*************************************************
 #//* add by bonovo zbiao for android box
 #//*************************************************
+#PRODUCT_COPY_FILES += \
+#    device/rockchip/$(TARGET_PRODUCT)/newsmy_initlogo.rle:root/initlogo.rle
+#    #device/rockchip/$(TARGET_PRODUCT)/bootanimation.zip:system/media/bootanimation.zip 
 
 PRODUCT_PACKAGES += \
 		blogd \

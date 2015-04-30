@@ -44,11 +44,11 @@ on init
 
     mkdir /mnt/internal_sd 0000 system system
     mkdir /mnt/shell/emulated 0700 shell shell
-    mkdir /storage 0751 root sdcard_r
     mkdir /storage/emulated 0555 root root
 
 on boot
-    setprop UserVolumeLabel "Android"
+#    setprop UserVolumeLabel "RockChips"
+    setprop UserVolumeLabel "Newsmy"
     mount debugfs /sys/kernel/debug /sys/kernel/debug
     chown system system /sys/devices/system/cpu/cpu1/online
     chmod 0660 /sys/devices/system/cpu/cpu1/online
@@ -71,7 +71,6 @@ on boot
     chmod 0666 /dev/bonovo_handle
     chmod 0666 /dev/bonovo_canbus
     chmod 0666 /dev/ttyS3
-    chmod 0666 /dev/bonovo_tty
     
     chown system system /sys/mali400_utility/utility
     chmod 0664 /sys/mali400_utility/utility
@@ -87,6 +86,7 @@ on boot
 # underlying files in /data/media will be created with user and group media_rw (1023)
 service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
     class main
+    
 
 on property:ro.factory.hasUMS=false
     symlink /storage/emulated/legacy /sdcard
@@ -109,10 +109,12 @@ on property:ro.factory.hasUMS=true
     mount rootfs rootfs / ro remount
     stop sdcard
 
+
 # Binding fuse mount point to /storage/emulated/legacy
 #on property:init.svc.sdcard=running
 #    wait /mnt/shell/emulated/0
 #    mount none /mnt/shell/emulated/0 /storage/emulated/legacy bind
+
 
 service wfd /system/bin/wfd
     class main

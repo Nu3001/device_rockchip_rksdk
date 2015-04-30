@@ -449,9 +449,6 @@ service console /system/bin/sh
 on property:ro.debuggable=1
     start console
 
-on property:dev.bootcomplete=1
-    start flash_once
-
 # adbd is controlled via property triggers in init.<platform>.usb.rc
 service adbd /sbin/adbd
     class core
@@ -463,6 +460,12 @@ service adbd /sbin/adbd
 on property:ro.kernel.qemu=1
     start adbd
 
+#SGX540
+service pvrsrvctl /system/vendor/bin/pvrsrvctl --start
+ 		oneshot
+    class core
+    group graphics
+    
 service servicemanager /system/bin/servicemanager
     class core
     user system
@@ -563,17 +566,8 @@ service installd /system/bin/installd
     class main
     socket installd stream 600 system system
 
-service flash_recovery /system/bin/install-recovery.sh
-    class core
-    user root
-    group root
-    oneshot
-
-service flash_once /system/bin/install-once.sh
-    class late_start
-    user root
-    group root
-    disabled
+service flash_recovery /system/etc/install-recovery.sh
+    class main
     oneshot
 
 service racoon /system/bin/racoon
@@ -605,8 +599,8 @@ service dumpstate /system/bin/dumpstate -s
     oneshot
 
 service drmservice /system/bin/drmservice
-    class main
-    oneshot
+	class main
+	oneshot
 
 service sshd /system/bin/start-ssh
     class main
@@ -630,7 +624,7 @@ service preinst_clr /system/bin/preinstall_cleanup.sh
 
 service getbootmode /system/bin/getbootmode.sh
     disabled
-    oneshot
+	oneshot
 
 # add by bonovo zbiao
 service bonovo-seriald /system/bin/seriald
@@ -639,10 +633,3 @@ service bonovo-seriald /system/bin/seriald
 
 service bonovo-logd /system/bin/blogd
     class main
-
-service sysinit /system/bin/sysinit
-    oneshot
-    class late_start
-    user root
-    group root
-

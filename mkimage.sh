@@ -54,8 +54,6 @@ BOOT_OTA="ota"
 if [ $TARGET == $BOOT_OTA ]
 then
 	echo "make ota images... "
-        echo "copy kernel.img"
-        cp kernel/kernel.img $IMAGE_PATH/kernel.img
 	echo -n "create boot.img with kernel... "
 	[ -d $OUT/root ] && \
 	mkbootfs $OUT/root | minigzip > $OUT/ramdisk.img && \
