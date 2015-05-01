@@ -297,6 +297,7 @@ PRODUCT_PACKAGES += \
 		BonovoAirConditioning \
 		BonovoCarDoor \
 		BonovoSoundBalance \
+                BonovoScreensaver \
 		gps.$(TARGET_BOARD_HARDWARE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
