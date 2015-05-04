@@ -5,7 +5,7 @@ on early-init
 
 on init
     export PATH /system/bin:/sbin
-    export LD_LIBRARY_PATH /lib
+    export LD_LIBRARY_PATH /lib:/sbin
     export ANDROID_ROOT /system
     export ANDROID_DATA /data
     export EXTERNAL_STORAGE /sdcard
@@ -44,6 +44,9 @@ on boot
     domainname localdomain
 
     class_start default
+
+on property:sys.powerctl=*
+    powerctl ${sys.powerctl}
 
 service ueventd /sbin/ueventd
     critical
