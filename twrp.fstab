@@ -6,5 +6,5 @@
 /data			ext4	/dev/block/mtd/by-name/userdata
 /metadata		ext4	/dev/block/mtd/by-name/metadata
 #/backup			ext4	/dev/block/mtd/by-name/backup
-#/misc			ext4	/dev/block/mtd/by-name/misc
+/misc			emmc	/dev/block/platform/emmc/by-name/misc
 /usb-otg         	vfat       /dev/block/sda1         /dev/block/sda       flags=display="USB-OTG";storage;wipeingui;removable
