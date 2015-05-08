@@ -147,7 +147,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/rockchip/rksdk/fstab.$(TARGET_BOARD_HARDWARE).bootmode.unknown:root/fstab.$(TARGET_BOARD_HARDWARE).bootmode.unknown \
     device/rockchip/rksdk/fstab.$(TARGET_BOARD_HARDWARE).bootmode.emmc:root/fstab.$(TARGET_BOARD_HARDWARE).bootmode.emmc \
-    device/rockchip/rksdk/twrp.fstab:root/etc/twrp.fstab
+    device/rockchip/rksdk/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # For audio-recoard 
 PRODUCT_PACKAGES += \
