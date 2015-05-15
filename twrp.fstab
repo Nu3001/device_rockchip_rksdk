@@ -1,10 +1,12 @@
 # TWRP fstab file.
-/internal_sd		vfat	/dev/block/mtd/by-name/user flags=settingsstorage
+/internal_sd		vfat	/dev/block/platform/emmc/by-name/user flags=settingsstorage
 /external_sd			vfat	/dev/block/mmcblk1p1 flags=display="Micro SDcard";storage;wipeingui;removable
-/cache			ext4	/dev/block/mtd/by-name/cache
-/system			ext4	/dev/block/mtd/by-name/system
-/data			ext4	/dev/block/mtd/by-name/userdata
-/metadata		ext4	/dev/block/mtd/by-name/metadata
+/cache			ext4	/dev/block/platform/emmc/by-name/cache
+/system			ext4	/dev/block/platform/emmc/by-name/system
+/data			ext4	/dev/block/platform/emmc/by-name/userdata
+/metadata		ext4	/dev/block/platform/emmc/by-name/metadata
 #/backup			ext4	/dev/block/mtd/by-name/backup
 /misc			emmc	/dev/block/platform/emmc/by-name/misc
+/recovery		emmc    /dev/block/platform/emmc/by-name/recovery
+/boot			emmc    /dev/block/platform/emmc/by-name/boot
 /usb-otg         	vfat       /dev/block/sda1         /dev/block/sda       flags=display="USB-OTG";storage;wipeingui;removable
