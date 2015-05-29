@@ -4,7 +4,7 @@
 /cache			ext4	/dev/block/platform/emmc/by-name/cache
 /system			ext4	/dev/block/platform/emmc/by-name/system
 /data			ext4	/dev/block/platform/emmc/by-name/userdata flags=wipeingui;wipeduringfactoryreset
-/metadata		ext2	/dev/block/platform/emmc/by-name/metadata flags=wipeduringfactoryreset
+/metadata		ext4	/dev/block/platform/emmc/by-name/metadata flags=wipeduringfactoryreset
 #/backup			ext4	/dev/block/mtd/by-name/backup
 /misc			emmc	/dev/block/platform/emmc/by-name/misc
 /recovery		emmc    /dev/block/platform/emmc/by-name/recovery
