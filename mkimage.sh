@@ -13,7 +13,7 @@ if [ "$1"x != ""x  ]; then
          TARGET=$1
 fi
 
-IMAGE_PATH=rockdev/Image-$TARGET_PRODUCT
+IMAGE_PATH=rockdev/Image
 
 rm -rf $IMAGE_PATH
 mkdir -p $IMAGE_PATH
