@@ -5,6 +5,7 @@ import init.connectivity.rc
 
 on early-init
     export SECOND_VOLUME_STORAGE /mnt/external_sd
+    export SECONDARY_STORAGE /mnt/external_sd
     mkdir /mnt/external_sd 0000 system system
     export THIRD_VOLUME_STORAGE /mnt/usb_storage
     mkdir /mnt/usb_storage 0000 system system
