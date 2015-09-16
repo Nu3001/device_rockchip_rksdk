@@ -169,6 +169,11 @@ service iprenew_bt-pan /system/bin/dhcpcd -n
     class main
     disabled
     oneshot
+    
+service usb_modeswitch /system/bin/usb_modeswitch -I -W -c /etc/usb_modeswitch.conf
+     class main
+     disabled
+     oneshot
 
 on property:ro.boot.charger.emmc=1
     mount ext4 /dev/block/platform/emmc/by-name/system /system wait ro noatime nodiratime
