@@ -71,6 +71,7 @@ on boot
     chmod 0666 /dev/bonovo_virtual_serial
     chmod 0666 /dev/bonovo_handle
     chmod 0666 /dev/bonovo_canbus
+    chmod 0666 /dev/bonovo_rds
     chmod 0666 /dev/ttyS3
     chmod 0666 /dev/bonovo_tty
     
