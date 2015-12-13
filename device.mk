@@ -290,6 +290,7 @@ PRODUCT_PACKAGES += \
 		libbonovokeyeditor \
 		libbonovobluetooth \
 		BonovoBluetooth \
+		BonovoBluetoothMusic \
 		libbonovovin \
 		BonovoVIn \
 		libbonovobackdraft \
