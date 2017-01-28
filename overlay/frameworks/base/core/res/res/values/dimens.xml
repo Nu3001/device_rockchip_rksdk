@@ -16,4 +16,5 @@
 
 <resources>
     <dimen name="navigation_bar_height">100dp</dimen>
+    <dimen name="navigation_bar_width">65dp</dimen>
 </resources>
